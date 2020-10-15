@@ -115,7 +115,7 @@ public class LinkedList<E> {
     The reverse function will take the head as a parameter and then slowly start to reverse the pointers in a while
     loop and reassign the head;
      */
-    public void reverse(Node<E> head){
+    public E reverse(Node<E> head){
         Node<E> next=null;
         Node<E> curr=head;
         Node<E> prev=null;
@@ -126,6 +126,7 @@ public class LinkedList<E> {
             curr=next;
         }
         this.head=prev;
+        return head.value;
     }
     /*
     This is the node class which consists of a value and a next pointer and a constructor
